@@ -1,0 +1,11 @@
+POST http://192.168.20.25:4000/api/registro
+Content-Type: application/json
+
+ {
+    "nombre": "jhon ",
+    "direccion": "calle 32",
+    "email": "jhon21@gmail.com ",
+    "contrasena": "1234",
+    "telefono": "31019190",
+    "id_rol": 2
+  }
