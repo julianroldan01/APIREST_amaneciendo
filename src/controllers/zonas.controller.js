@@ -2,7 +2,6 @@ import {getConnection} from "./../database/database";
 
 const getzona= async (req,res) =>{
     try{
-    console.log(req.params);
     const { id } = req.params
     const connection = await getConnection();
     const result = await connection.query("SELECT id_zona, tipo_zona, latitud, logitud, latitudelta, logintudelta FROM zona WHERE id_zona = ?", id);
@@ -15,7 +14,6 @@ const getzona= async (req,res) =>{
 
 const getestanco = async (req,res) =>{
     try {
-        console.log(req.params);
         const { id } = req.params
         const connection = await getConnection();
         const result = await connection.query("SELECT * from estanco WHERE id_zona = ?", id);

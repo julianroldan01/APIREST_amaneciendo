@@ -1,11 +1,11 @@
-GET http://192.168.20.25:4000/api/carta/1
+POST http://192.168.1.106:4000/api/carta
 Content-Type: application/json
 
 {
-    "imagen":"public/img/costeña.png",
-    "producto": "Costeña",
+    "imagen":"images/costeña.png",
+    "producto": "Duff",
     "volumen": "300 ml",
     "valor": 3300,
-    "id_tipo:": 1
+    "id_tipo": 2
     } 
 ###

@@ -14,7 +14,6 @@ const getregistro = async (req, res) => {
 const addregister = async (req, res) => {
     try {
         const { nombre, direccion, email, contrasena, telefono, id_rol } = req.body;
-        console.log(req.body)
         if (nombre === undefined || direccion === undefined || email === undefined || contrasena === undefined || telefono === undefined) {
             return res.status(400).json({ message: "Porfavor llene todos los campos" });
         }
@@ -23,7 +22,6 @@ const addregister = async (req, res) => {
         await connection.query("INSERT INTO persona SET ?", persona);
         return res.json({ message: "Usuario agregado" });
     } catch (error) {
-        console.log(error);
         return res.status(500).send(error.message);
     }
 };
