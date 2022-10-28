@@ -23,6 +23,7 @@ app.set("port", 4000);
 // Middlewares
 app.use(FirebaseValidate.decodeToken);
 app.use(express.static(__dirname + '/public'));
+app.use('/uploads', express.static('uploads'));
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
