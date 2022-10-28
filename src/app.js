@@ -7,7 +7,7 @@ import zonasroutes from "./routes/zonas.routes";
 import loginjwtroutes from "./routes/loginjwt.routes";
 import multer from "multer";
 
-// const FirebaseValidate = require('./middleware/index'); 
+const FirebaseValidate = require('./middleware/index'); 
 const app = express();
 // Funcion que permite decirle la carpeta a la cual se guarda  y que nombre sele da al archivo
 const storage = multer.diskStorage({
@@ -21,7 +21,7 @@ const upload = multer({ storage });
 app.set("port", 4000);
 
 // Middlewares
-// app.use(FirebaseValidate.decodeToken);
+app.use(FirebaseValidate.decodeToken);
 app.use(express.static(__dirname + '/public'));
 app.use(morgan("dev"));
 app.use(express.json());
